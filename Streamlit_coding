@@ -1,0 +1,39 @@
+import streamlit as st
+
+st.sidebar.success('Content 1')
+st.sidebar.success('Content 2')
+st.sidebar.success('Content 3')
+st.markdown('# Comprehensive Credit Card Data 💳')
+st.markdown("""
+    <style>
+    .centered-subheader {
+        text-align: center;
+        font-size: 1.6em;
+    }
+    </style>
+    <div class="centered-subheader">👉 Team 👈</div>
+    """, unsafe_allow_html=True)
+st.markdown("""
+## Content
+- Revenue
+- Sources
+""")
+
+# Part 1
+st.markdown('## 1. How much revenue do credit card companies get?')
+import pandas as pd
+import numpy as np
+chart_data = pd.DataFrame(np.random.randn(5, 3), columns=["a", "b", "c"])
+st.bar_chart(chart_data)
+
+# Part 2
+st.markdown('## 2. Where do the most Revenue come from?')
+chart_data = pd.DataFrame(np.random.randn(10, 3), columns=["a", "b", "c"])
+st.line_chart(chart_data)
+
+#Part 3
+st.markdown('## 3. Who are our primary customers?')
+chart_data = pd.DataFrame(np.random.randn(3, 3), columns=["a", "b", "c"])
+
+st.scatter_chart(chart_data)
+
